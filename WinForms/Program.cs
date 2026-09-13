@@ -1,4 +1,6 @@
-namespace ModernSSClient
+using ModernSSClient;
+
+namespace WinForms
 {
     internal static class Program
     {

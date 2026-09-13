@@ -1,0 +1,28 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AvaloniaClient.Views.MainWindow"
+        Title="VPN" Width="360" Height="460"
+        WindowStartupLocation="CenterScreen" CanResize="False">
+
+	<Grid RowDefinitions="Auto,Auto,*,Auto" Margin="20">
+		<Border x:Name="StatusPnl" Grid.Row="0" Height="14" CornerRadius="0" Background="#ef4444" Margin="0,0,0,15"/>
+
+		<StackPanel Grid.Row="1" Spacing="10">
+			<TextBlock x:Name="IPLabel" Text="IP: Detecting..." FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+			<TextBox x:Name="VPNKeyTB" Watermark="Paste your ss:// key here" TextWrapping="Wrap" Height="90"/>
+			<Button x:Name="EnterKBtn" Content="Save Key" HorizontalAlignment="Right" Click="EnterKBtn_Click"/>
+		</StackPanel>
+
+		<StackPanel Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Spacing="10">
+			<Button x:Name="ConnectBtn" Content="CONNECT" Width="160" Height="45"
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                    FontSize="16" FontWeight="Bold" Background="#22c55e" Foreground="White"
+                    Click="ConnectBtn_Click" CornerRadius="0" Cursor="Hand"/>
+
+			<Button x:Name="DisconnectBtn" Content="DISCONNECT" Width="160" Height="45"
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                    FontSize="16" FontWeight="Bold" Background="#ef4444" Foreground="White"
+                    IsVisible="False" Click="DisconnectBtn_Click" CornerRadius="0" Cursor="Hand"/>
+		</StackPanel>
+	</Grid>
+</Window>

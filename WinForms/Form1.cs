@@ -5,6 +5,7 @@ namespace ModernSSClient
     using System.Runtime.InteropServices;
     using System.Text;
     using System.Text.RegularExpressions;
+    using WinForms;
 
     public partial class Form1 : Form
     {
